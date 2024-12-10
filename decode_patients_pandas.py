@@ -95,7 +95,9 @@ def get_med_name(conn) -> pd.DataFrame:
     return df
 
 
-def check_range(df: pd.DataFrame, med_df: pd.DataFrame, test_count: int = 2) -> pd.DataFrame:
+def check_range(
+    df: pd.DataFrame, med_df: pd.DataFrame, test_count: int = 2
+) -> pd.DataFrame:
     """
     Check if test results fall within specified ranges and categorize them.
 
@@ -106,7 +108,7 @@ def check_range(df: pd.DataFrame, med_df: pd.DataFrame, test_count: int = 2) -> 
 
     med_df : pd.DataFrame
         DataFrame containing medical ranges for each analysis type.
-    
+
     test_count : int
         Minimum number of tests a patient must have to be included in the result (default is 2).
 
